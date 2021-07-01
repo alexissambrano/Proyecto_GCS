@@ -1,1 +1,1 @@
-# Proyecto_GCS Control de precios
+# Proyecto_GCS Control de Precios
