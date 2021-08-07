@@ -80,7 +80,7 @@
                             <li class="active"><a href="{{ route('home') }}" style="color: white;">Home</a></li>
                         @endguest
                         <li><a href="{{ route('preciosTabla') }}" style="color: white;">Buscar productos</a></li>
-                        <li><a href="#" style="color: white;">Noticias</a></li>
+                        <li><a href="{{ route('noticias') }}" style="color: white;">Noticias</a></li>
                         <li><a href="#" style="color: white;">Comentarios</a></li>
                         @auth
                             <li><a href="#" style="color: white;">Bienvenido {{ $user->usuario }}</a></li>
