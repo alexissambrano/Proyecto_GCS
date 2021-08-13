@@ -9,7 +9,31 @@
 
     <br>
     <br>
-    
+    <!-- Card Noticias Filtro -->
+    <section class="container mt-5 pt-5">
+        <br />
+        <div class="card">
+        
+            <h5 class="card-header"><b>NOTICIAS</b></h5>
+            <div class="card-body">
+                <form method="GET" action="{{ route('noticias') }}">
+                    @csrf
+                    <br />
+                    <div class="box ml-5">
+                        Seleccione el tipo de noticia
+                        <select name="tipo">
+                            <option value="Farmacias y boticas" selected disabled>Todos</option>
+                            <option value="Farmacias y boticas">Farmacias y boticas</option>
+                            <option value="Del estado">Actualidad</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Buscar noticia" class="btn btn-primary btn-sm ml-5">
+            
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Card Noticias -->
     <section class="container mt-5 pt-5">
 
         <div class="card-deck">
