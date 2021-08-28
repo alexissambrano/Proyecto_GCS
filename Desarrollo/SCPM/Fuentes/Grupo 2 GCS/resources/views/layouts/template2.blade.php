@@ -83,7 +83,7 @@
                         <li><a href="{{ route('noticias') }}" style="color: white;">Noticias</a></li>
                         <li><a href="#" style="color: white;">Comentarios</a></li>
                         @auth
-                            <li><a href="#" style="color: white;">Bienvenido {{ $user->usuario }}</a></li>
+                            <li><a href="{{ route('perfil', $user->usuario) }}" style="color: white;">Bienvenido {{ $user->usuario }}</a></li>
 
                             <li><a href="#">
                                     <form method="POST" action="{{ route('logout') }}">{{ csrf_field() }}
