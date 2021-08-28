@@ -57,19 +57,19 @@ class LoginController extends Controller
     {
         return 'usuario';
     } 
-    public function perfilUserfb(){
+    public function perfilUserfb($nombre){
         $usuarioLogeado =\Auth::user(); 
         $is_fb = true;
         if($usuarioLogeado->tipo == NULL){
             $is_fb=false;
-            return view('userFb/perfilFbE',compact('is_fb'));
+            return view('perfil',compact('is_fb'));
         }else{
             $is_fb=true;
             //$medicinasShow = $usuarioLogeado->userFb->userSpace->userMedi;
             $establecimientos_ubi=establecimientos::all();
 
             $medicinasShow=user_medi::where('user_space_id',$usuarioLogeado->userFb->userSpace->id)->paginate(5);
-            return view('userFb/perfilFbE',compact('is_fb','medicinasShow','establecimientos_ubi'));
+            return view('perfil',compact('is_fb','medicinasShow','establecimientos_ubi'));
         }
     }
 
