@@ -25,8 +25,8 @@ class user_medi extends Model
     public function scopePrecio($query, $nameSearch2)
     {
         if($nameSearch2)
-            return $query->where('precio_med', "$nameSearch2");
-    }
+            return $query->where('farmacia', 'LIKE', "%$nameSearch2%");
+    } 
 
     public function scopeFiltro($query, $filtro)
     {
